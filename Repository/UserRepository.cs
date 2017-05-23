@@ -21,6 +21,13 @@ namespace Repository
           _dbContext.User.Add(user);           
       }
 
+        public void Update(User user)
+        {
+
+            _dbContext.Entry<User>(user).State = System.Data.Entity.EntityState.Modified;
+        }
+
+
 
 
     }
